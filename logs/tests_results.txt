@@ -1,29 +1,10 @@
 test_average (__main__.TestExercice) ... ok
 test_square (__main__.TestExercice) ... ok
 test_square_root (__main__.TestExercice) ... ok
-test_to_celsius (__main__.TestExercice) ... FAIL
+test_to_celsius (__main__.TestExercice) ... ok
 test_to_degrees (__main__.TestExercice) ... FAIL
-test_to_farenheit (__main__.TestExercice) ... FAIL
+test_to_farenheit (__main__.TestExercice) ... ok
 test_to_radians (__main__.TestExercice) ... FAIL
-
-======================================================================
-FAIL: test_to_celsius (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 98, in test_to_celsius
-    'Mauvais calcul de farenheit -> celsius'
-AssertionError: Lists differ: [-177.77777777777777, -191.66666666666666, 72.77777777777777] != [-17.77777777777778, -31.666666666666664, 232.77777777777777]
-
-First differing element 0:
--177.77777777777777
--17.77777777777778
-
-- [-177.77777777777777, -191.66666666666666, 72.77777777777777]
-?    -               ^   ^^                  ^
-
-+ [-17.77777777777778, -31.666666666666664, 232.77777777777777]
-?                   ^   ^                +  ^^
- : Mauvais calcul de farenheit -> celsius
 
 ======================================================================
 FAIL: test_to_degrees (__main__.TestExercice)
@@ -47,25 +28,6 @@ First differing element 0:
 +  (213.95544569810457, -2.673258113725865, 23.057550624127998)] : Mauvais calcul de radians -> degres
 
 ======================================================================
-FAIL: test_to_farenheit (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 110, in test_to_farenheit
-    'Mauvais calcul de celsius -> farenheit'
-AssertionError: Lists differ: [320.0, 275.0, 1131.8000000000002] != [32.0, -13.0, 843.8000000000001]
-
-First differing element 0:
-320.0
-32.0
-
-- [320.0, 275.0, 1131.8000000000002]
-?    -    ^^^    ^^ -             ^
-
-+ [32.0, -13.0, 843.8000000000001]
-?        ^^^    ^^              ^
- : Mauvais calcul de celsius -> farenheit
-
-======================================================================
 FAIL: test_to_radians (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -81,6 +43,6 @@ First differing element 0:
 + [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748] : Mauvais calcul de degres -> radians
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.006s
+Ran 7 tests in 0.004s
 
-FAILED (failures=4)
+FAILED (failures=2)
