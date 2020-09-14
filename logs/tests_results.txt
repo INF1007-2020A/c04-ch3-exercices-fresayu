@@ -1,10 +1,29 @@
 test_average (__main__.TestExercice) ... ok
 test_square (__main__.TestExercice) ... ok
 test_square_root (__main__.TestExercice) ... ok
-test_to_celsius (__main__.TestExercice) ... ok
+test_to_celsius (__main__.TestExercice) ... FAIL
 test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... FAIL
 test_to_radians (__main__.TestExercice) ... FAIL
+
+======================================================================
+FAIL: test_to_celsius (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test_exercice.py", line 98, in test_to_celsius
+    'Mauvais calcul de farenheit -> celsius'
+AssertionError: Lists differ: [-177.77777777777777, -191.66666666666666, 72.77777777777777] != [-17.77777777777778, -31.666666666666664, 232.77777777777777]
+
+First differing element 0:
+-177.77777777777777
+-17.77777777777778
+
+- [-177.77777777777777, -191.66666666666666, 72.77777777777777]
+?    -               ^   ^^                  ^
+
++ [-17.77777777777778, -31.666666666666664, 232.77777777777777]
+?                   ^   ^                +  ^^
+ : Mauvais calcul de farenheit -> celsius
 
 ======================================================================
 FAIL: test_to_degrees (__main__.TestExercice)
@@ -12,13 +31,16 @@ FAIL: test_to_degrees (__main__.TestExercice)
 Traceback (most recent call last):
   File "test_exercice.py", line 86, in test_to_degrees
     'Mauvais calcul de radians -> degres'
-AssertionError: Lists differ: [(0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.[20 chars]0.0)] != [(79.0980174562859, 5.881047377154118, 29.6[197 chars]998)]
+AssertionError: Lists differ: [(114.59155902616465, 6875.493541569879, 41[194 chars]624)] != [(79.0980174562859, 5.881047377154118, 29.6[197 chars]998)]
 
 First differing element 0:
-(0.0, 0.0, 0.0)
+(114.59155902616465, 6875.493541569879, 412529.6124941927)
 (79.0980174562859, 5.881047377154118, 29.612494192724625)
 
-- [(0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.0, 0.0), (0.0, 0.0, 0.0)]
+- [(114.59155902616465, 6875.493541569879, 412529.6124941927),
+-  (-229.1831180523293, -13750.987083139758, -825059.2249883855),
+-  (286.4788975654116, 17188.733853924696, 1031324.0312354818),
+-  (234.33973820850667, 14060.3842925104, 843623.057550624)]
 + [(79.0980174562859, 5.881047377154118, 29.612494192724625),
 +  (-278.1960349125718, 48.23790524569176, 0.7750116145507491),
 +  (257.74504364071475, -15.297381557114704, 44.031235481811564),
@@ -59,6 +81,6 @@ First differing element 0:
 + [-0.08668468618238503, 0.17598251810595048, 6.283490739798685, 6.9973449482748] : Mauvais calcul de degres -> radians
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.002s
+Ran 7 tests in 0.006s
 
-FAILED (failures=3)
+FAILED (failures=4)
